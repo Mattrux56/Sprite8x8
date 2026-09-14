@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor de Sprites 8x8</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Editor de Sprites 8x8</h1>
+      <p class="subtitle">Electrónica Digital - CUL</p>
+
+      <div id="sprite-grid" class="sprite-grid" aria-label="Editor de sprites 8x8"></div>
+
+      <section class="panel">
+        <label class="label" for="hex-output">Valor Hexadecimal Actual (64 bits):</label>
+        <div id="hex-output" class="hex-output" aria-live="polite">0000000000000000</div>
+
+        <div class="controls">
+          <input
+            id="hex-input"
+            type="text"
+            maxlength="16"
+            placeholder="Ej: FFFF0000FFFF0000"
+            aria-label="Código hexadecimal"
+            autocomplete="off"
+          />
+          <button id="load-hex-btn" type="button">Cargar Hex</button>
+        </div>
+
+        <p id="error-text" class="error" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
